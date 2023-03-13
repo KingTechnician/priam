@@ -32,7 +32,10 @@ https://user-images.githubusercontent.com/104329626/223510564-9edf7d7e-4198-4b42
 https://user-images.githubusercontent.com/104329626/223513689-89c3fa35-3ee7-4f16-815a-121a1c623c47.mp4
 
 
-
+## Run Locally
+ - Want to start small? Not sure if you want to dedicate to a full application?
+    - Check out the [Lite version](https://www.github.com/kingtechnician/priam_lite) of this application (non-downloadable, basic design)
+ - Otherwise, follow the instructions at pre_setup.md to follow how I set up authenticaion and servers, then follow the application_setup.md file to set up the application.
 
 
 
