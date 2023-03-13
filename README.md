@@ -1,6 +1,6 @@
 # Priam
 
-## Purpose (**NOTE: Check out the [Priam](https://www.github.com/kingtechnician/priam_lite) application README before reading this.**)
+## Purpose
 
  - Are you a student who has a new idea or concern they would like to make known to the university administration?
  - Are you unsure of the resources or means necessary?
