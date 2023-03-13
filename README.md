@@ -39,7 +39,7 @@ https://user-images.githubusercontent.com/104329626/223513689-89c3fa35-3ee7-4f16
 
 ## Steps to a 1.0.0 Production (Complete!)
 
-- [x] User has the ability to login using VSU email
+- [x] User has the ability to login using university email
 - [x] Only VSU emails are allowed to validate and pass login
 - [x] Profile username is recognized by the application
 - [x] User can query server posts
