@@ -17,7 +17,7 @@ Authentication is done using Auth0, a reliable and secure platform for authentic
  5. Your authentication should be created!
  
  #### Some Additional Information
-  - Every authentication will have a Client Domain and Client ID. These credentials are secret - they are and should be publicly available (as it composes the URL through which your users sign in). You can comfortably use these credentials in your frontend.
+  - Every authentication will have a Client Domain and Client ID. These credentials are **public** - they are and should be publicly available (as it composes the URL through which your users sign in). You can comfortably use these credentials in your frontend.
   - Client **Secret**, however, should **never** be used that loosely. If you're following how I implemented the application, though, you won't need to use it anyway.
  
  ### Create MongoDB Account and Set Up Server
@@ -36,19 +36,37 @@ Authentication is done using Auth0, a reliable and secure platform for authentic
   
   ![image](https://user-images.githubusercontent.com/104329626/225139397-1c82ccd0-1095-4be8-9c6f-b7ab19590436.png)
    - We're also going to set a collection within the database (this will be necessary later for giving the right permissions of users of your application)
-   - 
-  
+   - Click ```Browse Collections``` to be greeted with a screen that prompt for either test data or entering your own data. We're entering our own data, so select that option.
+   - Choose your collection and database names. (Note: You can set these names to anything you would like)
+   - After creating them, you should see the database and collection initialized in your server:
+
+   
+  ![image](https://user-images.githubusercontent.com/104329626/225146941-eae6c02e-9173-4941-8cc0-2d8941478e1c.png)
+
 
   
   
   #### 4. Create the credentials for a user 
-   - Head to **Security > Databases** and you should see the user you just created.
-   - However, this user is for you, the admin, and not an average user. A user should not be able to create and delete any databases. We're going to add this user.
+   - Head to **Security > Databases** and you should see the admin user you created when you finished creating this account.
+   - However, this user is for you, the admin, and not an average user/customer. A user should not be able to create and delete any databases, or change collections. We're going to add a new set of credentials for a user that can only read, write, and watch changes to a specific database.
    - Right now, you should be on a Database Users tab. Head over to the "Custom Roles" tab.
    - Your screen should look like this:
    ![image](https://user-images.githubusercontent.com/104329626/225137229-fd9b62a3-0d7f-485b-8af5-1e0213f4ebdd.png)
    - Click ``Add New Custom Role```
    - Set the name of the role to something you prefer, or perhaps "priam-user"
+   - Click the **Action or Role** dropdown and specify the following:
+    - Under Collection Actions
+      - Select **all** of **Query and Write Actions**.
+      - Ignore **Database Management Actions**.
+      - Select *all** of Change Stream Actions**.
+      - **Leave everything else unchecked.**
+   - Under the **Database** field, set it to the exact name of the name of the database you created earlier. (The name of the database, not "Cluster0")
+   - Leave Collections blank and save those options.
+   Success! You should see a user created with the following display:
+   ![image](https://user-images.githubusercontent.com/104329626/225149050-6b1cb2e6-2e58-4c33-bb15-34299d503bca.png)
+   
+   - Ensure you have above permissions set. Not having these will make certain parts of the code (particularly the backend) not work correctly.
+
 
    
 
