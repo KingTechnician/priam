@@ -17,7 +17,7 @@ Authentication is done using Auth0, a reliable and secure platform for authentic
  5. Your authentication should be created!
  
  #### Some Additional Information
-  - Every authentication will have a Client Domain and Client ID. These credentials are **public** - they are and should be publicly available (as it composes the URL through which your users sign in). You can comfortably use these credentials in your frontend.
+  - Every authentication will have a Client Domain and Client ID. These credentials are **public** - they are and should be publicly available (as it composes the URL through which your users sign in). You can comfortably use these credentials in your frontend. In regards to React, you will be inputting these directly (see [@auth0/auth0-react](https://www.npmjs.com/package/@auth0/auth0-react))
   - Client **Secret**, however, should **never** be used that loosely. If you're following how I implemented the application, though, you won't need to use it anyway.
  
  ### Create MongoDB Account and Set Up Server
@@ -32,11 +32,11 @@ Authentication is done using Auth0, a reliable and secure platform for authentic
    - If you're just testing things out, I recommend using a M0 shared cluster. This will ensure no charges, but still give you a powerful enough environment to store what Priam needs to store. All other settings might be more tailored to your use case. If you don't know what the settings mean, simply use the default.
    
   #### 3. Creating the First Database and First Collection
-   - You should be greeted with a screen that will show some user credentials to set up for the server. Follow those instructions, then click the ```Finish & Close ``` button at the bottom of the page. Your database should be created! It will be viewable under **Deployment > Databases**, and will look similar to this:
+   - You should be greeted with a screen that will show some user credentials to set up for the server. Follow those instructions, then click the ```Finish & Close ``` button at the bottom of the page. Your database cluster should be created! It will be viewable under **Deployment > Databases**, and will look similar to this:
   
   ![image](https://user-images.githubusercontent.com/104329626/225139397-1c82ccd0-1095-4be8-9c6f-b7ab19590436.png)
    - We're also going to set a collection within the database (this will be necessary later for giving the right permissions of users of your application)
-   - Click ```Browse Collections``` to be greeted with a screen that prompt for either test data or entering your own data. We're entering our own data, so select that option.
+   - Click ```Browse Collections``` to be greeted with a screen that will prompt for either test data or entering your own data. We're entering our own data, so select that option.
    - Choose your collection and database names. (Note: You can set these names to anything you would like)
    - After creating them, you should see the database and collection initialized in your server:
 
@@ -55,17 +55,25 @@ Authentication is done using Auth0, a reliable and secure platform for authentic
    - Click ``Add New Custom Role```
    - Set the name of the role to something you prefer, or perhaps "priam-user"
    - Click the **Action or Role** dropdown and specify the following:
-    - Under Collection Actions
-      - Select **all** of **Query and Write Actions**.
-      - Ignore **Database Management Actions**.
-      - Select *all** of Change Stream Actions**.
-      - **Leave everything else unchecked.**
+   
+   - Under Collection Actions
+     - Select **all** of **Query and Write Actions**.
+     - Ignore **Database Management Actions**.
+     - Select *all** of Change Stream Actions**.
+     - **Leave everything else unchecked.**
    - Under the **Database** field, set it to the exact name of the name of the database you created earlier. (The name of the database, not "Cluster0")
    - Leave Collections blank and save those options.
    Success! You should see a user created with the following display:
    ![image](https://user-images.githubusercontent.com/104329626/225149050-6b1cb2e6-2e58-4c33-bb15-34299d503bca.png)
    
    - Ensure you have above permissions set. Not having these will make certain parts of the code (particularly the backend) not work correctly.
+   - Your server should be set up for making server calls in your project!
+   - If you would like to see how to do this, head back to **Deployment > Database** and click the ```Connect``` button on your cluster display. It should walk through the different ways you can accomplish this.
+    
+   
+ ## All Done! Some Additional Notes
+ 
+ The creating of authentication and servers should be complete now. There are some additional steps I took relating to Auth0 (both programmatically and within the tool itself) that I explain in application_setup.md. If you would like to use your own implementation, however, you now should have all the tools you need to get started.
 
 
    
