@@ -64,4 +64,23 @@ If you have not completed the pre_setup.md instructions, please complete that be
 
 Success! Your backend service is now almost completely setup. The next steps will be some integrations between Auth0 and MongoDB, along with configuring Auth0 so that only your university's emails can sign in.
 
+## Setting up Auth0 For Your University
+
+One of the login goals of our application is that only emails from a specific university will be able to have access. Below are two options for implementing this.
+
+### Option 1: Using Microsoft SSO from your university's email domain (Preferred)
+
+- If you are a professor or staff member who wants to integrate this application for your university, you can add Auth0 Integrations into your account and get set up! [Office 365](https://marketplace.auth0.com/integrations/office-365-sso)
+
+
+### Option 2: Programmatically checking for university email addresses for incoming sign-on
+
+- More than likely, most of you will fall into this category (as you are likely students/engineers).
+- But don't worry! Using Auth0 Rules, we can programmatically check the email domains of incoming users in a secure, isolated sandbox.
+- Sign in to Auth0 again and head to the Dashboard.
+- From there, navigate to **Auth Pipeline > Rules**.
+- Click the ```Create``` button at the top right.
+- Choose ```Empty Rule``` under the selections.
+- Set the name to ```Email Domain Whitelist```.
+- Paste the code provided in ```auth0-scripts/emailFiltering.js
 
