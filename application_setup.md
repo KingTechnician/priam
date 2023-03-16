@@ -122,6 +122,28 @@ Your Flow shuld look like this:
     - If you set email whitelisting via Actions, ensure that your Action is placed **after** the whitelisting Action, but **before** ```Complete```. This will ensure a user is only added to the server after it's confirmed that the user is whitelisted.
     - Example:
     ![image](https://user-images.githubusercontent.com/104329626/225756236-b2201530-c962-4312-a9e6-e25f2713d17f.png)
+    
+## MongoDB Aggregations [Temporary Fix]
+- While implementing this application, aggregating via Netlify Serverless Functions seemed to not reflect the aggreagations to the server. A temporary fix is using a mix of PyMongo and Heroku to securely watch for server changes and update the serer.
+- A future version of Priam would be using Netlify Functions instead.
+  1. If you have the project downloaded already, navigate to the ```aggregations``` folder.
+  2. Install ```heroku``` globally either using
+    - NPM: ```npm install -g heroku```
+    - Yarn: ```yarn global add heroku```
+  3. Additionally, ensure that you have git installed:
+    - You can do this using similar NPM and Yarn commands, though you can also head over to [Git's home page](https://git-scm.com/downloads) and install it directly.
+  5. Run ```heroku login``` to sign in. If you do not have an account, follow the steps to create one.
+  6. After logging in, to deploy the code, first initialize a local repository with ```git init```.
+  7. Add the files to the repository by running ```git add .``` (Note the period).
+  8. Commit the files to the primary branch of the repository by running ```git commit -m "Initial code"```.
+  9. Finally, send the files to the Heroku using ```git push heroku main```.
+    - If you get an error whle running this code, it's possible you have the main branch set to the default "master". Try ```git push heroku master``` instead.
+  10. Follow the prompts to setting a new site.
+  11. Once everything pushes correctly, follow the instructions at [this page](https://devcenter.heroku.com/articles/config-vars) for setting the ```ATLAS_URI``` variable to your MongoDB url.
+  12. Run ```heroku ps:scale worker=1``` to set a single worker that will check for changes to the MongoDB server and aggregate.
+  13. Success! Your aggregations should now be automatic, and running.
+
+
 
 
 
