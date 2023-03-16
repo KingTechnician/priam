@@ -77,14 +77,51 @@ One of the login goals of our application is that only emails from a specific un
 
 - More than likely, most of you will fall into this category (as you are likely students/engineers).
 - But don't worry! Using Auth0 Rules, we can programmatically check the email domains of incoming users in a secure, isolated sandbox.
-- Sign in to Auth0 again and head to the Dashboard.
-- From there, navigate to **Auth Pipeline > Rules**.
-- Click the ```Create``` button at the top right.
-- Choose ```Empty Rule``` under the selections.
-- Set the name to ```Email Domain Whitelist```.
-- Paste the code provided in ```auth0-scripts/emailFiltering.js```
-- After saving this code, you should be able to check this as a new rule by clicking the switch button beside it:
+  1. Sign in to Auth0 again and head to the Dashboard.
+  2. From there, navigate to **Actions > Flows**.
+  3. Under the available options, choose **Pre User Registration**
+  4. Here is where we can set an Action to be done every time a user tries to register for an account. Click the **+** button beside ```Add Action```.
+  5. We're going to be creating our own Action, so choose ```Build Custom```.
+  6. Under Name, choose something similar to ```University Email Whitelisting```, then continue to ```Create```.
+  7. Replace the ```exports.onExecutePreUserRegistration``` code with the code given at ```auth0-scripts/emailFiltering```.
+  8. Set the parameter of the ```endsWith``` method to domain of your university email **without** the @ symbol.
+  9. Set the comparison operator of ```event.client.name``` to the name of the authenication you set for your application as it appears on your dashboard.
+  10. Click ```Save Draft```, then ```Deploy```.
+  11. Head back to the **Pre User Registration** page, and click the ```Custom``` tab. You should be able to see the Action you just created.
+  12. Simply click and drag the Action between ```Start``` and ```Complete```, and the Flow will be created! (Make sure to click ```Apply``` at the top so changes are saved).
+- While not an ideal solution, this will prevent non-university emails from registering by kicking them out.
+Your Flow shuld look like this:
 
-![image](https://user-images.githubusercontent.com/104329626/225686228-518ab408-4cd7-4d48-8031-f186c8f1d2d9.png)
+![image](https://user-images.githubusercontent.com/104329626/225748854-91935608-b74d-4768-9440-2ecbb19a0dbe.png)
+
+
+
+## Connecting Auth0 with MongoDB
+
+- When a new account is created, we need to be able to add the user into the MongoB server collection.
+- Fortunately, we can use Flows to add this as well.
+  1. To start, head to **Actions > Flows**.
+  2. Choose **Pre User Registration** from the list of options.
+  3. Click the **+** button, and choose **Build Custom**.
+  4. Under Name, choose a name similar to **MongoDB User Integrations**.
+  5. You will see a small in-browser IDE where your code will be housed.
+  6. In order to implement our function, we first need to set a secret that will house our MongoDB url.
+  7. On the left side of the IDE, click the key icon, and click ```Add Secret```.
+  8. Set the key to your choice, and the value to your MongoDB URI.
+  9. Your secret has now been set, and will be accessed via ```event.secrets```.
+  10. Next, we will add the ```mongodb``` JS module to the Action.
+  11. Click the third icon on the left of the IDE, then ```Add Dependency```.
+  12. Under name, choose ```mongodb```.
+  13. This project uses 4.13.0 at the moment. You can use more recent versions or the latest versions, though be aware that syntax for the code may be different. Set the Version, then click ```Create```.
+  14. We're ready to include the code now! Replace the ```onExecutePreUserRegistration``` function with the code in ```auth0-scripts/serverPreparation.js```.
+  15. Set the ```url``` to the name of the secret for your MongoDB url, if it is not ```ATLASURI```.
+  16. Change the parameter of ```client.db``` to the name of the database you created on MongoDB.
+  17. Click ```Save Draft```, then ```Deploy``` at the top right.
+  18. Your new Action should be saved! Head back to **Actions > Flows > Pre User Registration**.
+  19. Go to the **Custom** tab, and click and drag your Action between ```Start``` and ```Complete```.
+    - If you set email whitelisting via Actions, ensure that your Action is placed **after** the whitelisting Action, but **before** ```Complete```. This will ensure a user is only added to the server after it's confirmed that the user is whitelisted.
+    - Example:
+    ![image](https://user-images.githubusercontent.com/104329626/225756236-b2201530-c962-4312-a9e6-e25f2713d17f.png)
+
 
 
