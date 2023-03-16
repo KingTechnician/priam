@@ -144,6 +144,9 @@ Your Flow shuld look like this:
   13. Success! Your aggregations should now be automatic, and running.
 
 
+- Provded that you deploy the client via Netlify, and the backend via Netlify Functions, you should now have the app completely set up!
+
+
 
 
 
