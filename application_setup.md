@@ -82,5 +82,9 @@ One of the login goals of our application is that only emails from a specific un
 - Click the ```Create``` button at the top right.
 - Choose ```Empty Rule``` under the selections.
 - Set the name to ```Email Domain Whitelist```.
-- Paste the code provided in ```auth0-scripts/emailFiltering.js
+- Paste the code provided in ```auth0-scripts/emailFiltering.js```
+- After saving this code, you should be able to check this as a new rule by clicking the switch button beside it:
+
+![image](https://user-images.githubusercontent.com/104329626/225686228-518ab408-4cd7-4d48-8031-f186c8f1d2d9.png)
+
 
