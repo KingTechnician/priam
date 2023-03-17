@@ -33,10 +33,10 @@ https://user-images.githubusercontent.com/104329626/225977328-a4fab17d-e965-44b0
 
 
 ## Run Locally
- - Before anything, check out the pre_setup.md to follow how I set up authentication and the server.
+ - Before anything, check out the [pre_setup.md](https://github.com/KingTechnician/priam/blob/main/pre_setup.md) to follow how I set up authentication and the server.
  - Want to start small? Not sure if you want to dedicate to a full application?
-    - Check out the [Lite version](https://www.github.com/kingtechnician/priam_lite) of this application (non-downloadable, basic design)
- - Otherwise, follow the instructions at application_setup.md to set up the application locally.
+    - Check out the [Lite version](https://www.github.com/kingtechnician/priam_lite) of this application (Flask with Python, non-downloadable, basic design)
+ - Otherwise, follow the instructions at [application_setup.md](https://github.com/KingTechnician/priam/blob/main/application_setup.md) to set up the application locally.
 
 
 
