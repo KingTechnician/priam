@@ -21,15 +21,14 @@
 ## User Stories (Subject to change as more features are added)
 
 
-https://user-images.githubusercontent.com/104329626/223510564-9edf7d7e-4198-4b42-828e-be889891e97b.mp4
+https://user-images.githubusercontent.com/104329626/225977254-146f3833-8bcd-426e-bdff-6124a60b0f86.mp4
 
 
 
+https://user-images.githubusercontent.com/104329626/225977328-a4fab17d-e965-44b0-82e4-45fd87be1600.mp4
 
 
 
-
-https://user-images.githubusercontent.com/104329626/223513689-89c3fa35-3ee7-4f16-815a-121a1c623c47.mp4
 
 ## Run Locally
  - Before anything, check out the pre_setup.md to follow how I set up authentication and the server.
