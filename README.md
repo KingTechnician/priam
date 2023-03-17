@@ -56,8 +56,13 @@ https://user-images.githubusercontent.com/104329626/225977328-a4fab17d-e965-44b0
 - [x] User can add tags to created posts
 - [x] Users are able to upvote desired posts, which are also stored in a server
 
-## Ensuring Security (Complete!)
-- [x] Keeping important values in-memory and inaccessible via browser
-- [x] Validating people accessing the AWS Lambda Functions through Auth0 tokens
-- [x] MFA
-- [x] Ensuring CORS policy for AWS Lambda Functions
+## Committing
+
+- Helping out with this project is heavily encouraged! I am an undergraduate student still learning React and many other technologies, so your guidance will help me make this project even greater and more useful.
+- I want the documentation to as simple as possible to readable both for experts as well as beginners. If you propose a project change, be sure to also provide some Markdown documentation about the steps you took, or a very detailed explanation of what you did in the description of your commit. 
+
+## Next Steps
+
+- Are there ways we can fortify the code more?
+- Can we create a service that creates this application on behalf of others? (Perhaps a website or app that creates personalized Priam systems).
+
