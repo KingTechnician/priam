@@ -1,0 +1,62 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-react": "^2.0.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/lab": "^5.0.0-alpha.118",
+    "@mui/material": "^5.11.7",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "cross-env": "^7.0.3",
+    "notistack": "^2.0.8",
+    "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "react-window": "^1.8.8",
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^6.5.4",
+    "workbox-broadcast-update": "^6.5.4",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-google-analytics": "^6.5.4",
+    "workbox-navigation-preload": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-range-requests": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4",
+    "workbox-streams": "^6.5.4"
+  },
+  "scripts": {
+    "start": "cross-env REACT_APP_AUTH0_DOMAIN=kingtechnician.us.auth0.com REACT_APP_AUTH0_CLIENT=xTbGmROcQrGne2nH7AAEDu1C3E8hKeBW react-scripts start",
+    "build": "cross-env REACT_APP_AUTH0_DOMAIN=kingtechnician.us.auth0.com REACT_APP_AUTH0_CLIENT=xTbGmROcQrGne2nH7AAEDu1C3E8hKeBW react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-button
+{
+  background-color: #0429fd;
+  border-radius: 12px;
+}
+
+.postTitle
+{
+  font-size:"1vw";
+}
+
+.postDescription
+{
+  font-size:"5vw";
+}
+
+.App-header {
+  background: linear-gradient(to top, #0429fdba, #193A6F), url('./VirginiaStateUniversity.jpg') no-repeat center;
+  background-size:cover;
+  color: '#225ca210';
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App-inside-header
+{
+  
+  background:#193A6F;
+  background-size:cover;
+  color: '#225ca210';
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.homePage p
+{
+  font-size:3vh;
+  padding:8px;
+}
+
+.posts
+{
+  padding: 30px;
+}
+
+h4
+{
+  font-size: 2.5vh;
+  text-align:left;
+}
+h6
+{
+  font-weight:normal;
+  text-align:left;
+  font-size: 1.6dvh;
+}
+
+h5
+{
+  color:white;
+  font-weight:normal;
+  font-size: 2.1dvw;
+}
+.searchBox
+{
+  align-items:left;
+  background-color: #f1f1f1;
+  border-radius:12px;
+}
+
+@media screen{ 
+  h6{
+    font-size: 2.5vh;
+  }
+}
+
+
+.searchCard
+{
+  transition: all 0.6s;
+}
+.searchCard:hover
+{
+  border: 1px solid #7c8ce8;
+  transition: all 0.6s;
+}

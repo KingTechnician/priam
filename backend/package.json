@@ -1,0 +1,17 @@
+{
+    "name": "priam-backend",
+    "version": "0.0.1",
+    "description": "The backend for the Priam PWA Application.",
+    "author": "KingTechnician",
+    "license": "ISC",
+    "dependencies": {
+        "auth0-js": "^9.20.2",
+        "child_process": "^1.0.2",
+        "jsonwebtoken": "^9.0.0",
+        "jwks-rsa": "^3.0.1",
+        "leo-profanity": "^1.7.0",
+        "mongodb": "4.13.0",
+        "profanity-filter": "^0.2.1",
+        "xhr2": "^0.2.1"
+    }
+}
