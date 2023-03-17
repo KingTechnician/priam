@@ -36,8 +36,8 @@
     "workbox-streams": "^6.5.4"
   },
   "scripts": {
-    "start": "cross-env REACT_APP_AUTH0_DOMAIN=kingtechnician.us.auth0.com REACT_APP_AUTH0_CLIENT=xTbGmROcQrGne2nH7AAEDu1C3E8hKeBW react-scripts start",
-    "build": "cross-env REACT_APP_AUTH0_DOMAIN=kingtechnician.us.auth0.com REACT_APP_AUTH0_CLIENT=xTbGmROcQrGne2nH7AAEDu1C3E8hKeBW react-scripts build",
+    "start": "cross-env REACT_APP_AUTH0_DOMAIN=<AUTH0_DOMAIN_HERE> REACT_APP_AUTH0_CLIENT=<AUTH0_CLIENT_HERE> REACT_APP_BACKEND_URL=<BACKEND_URL_HERE> react-scripts start",
+    "build": "cross-env REACT_APP_AUTH0_DOMAIN=<AUTH0_DOMAIN_HERE> REACT_APP_AUTH0_CLIENT=<AUTH0_CLIENT_HERE> REACT_APP_BACKEND_URL=<BACKEND_URL_HERE> react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
