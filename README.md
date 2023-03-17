@@ -1,5 +1,7 @@
 # Priam
 
+A progressive web application that uses a MongoDB, React, and Netlify serverless function stack.
+
 ## Purpose
 
  - Are you a student who has a new idea or concern they would like to make known to the university administration?
