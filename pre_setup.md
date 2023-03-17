@@ -73,7 +73,7 @@ Authentication is done using Auth0, a reliable and secure platform for authentic
    
  ## All Done! Some Additional Notes
  
- The creating of authentication and servers should be complete now. There are some additional steps I took relating to Auth0 (both programmatically and within the tool itself) that I explain in application_setup.md. If you would like to use your own implementation, however, you now should have all the tools you need to get started.
+ The creating of authentication and servers should be complete now. There are some additional steps I took relating to Auth0 (both programmatically and within the tool itself) that I explain in [application_setup.md](https://github.com/KingTechnician/priam/blob/main/application_setup.md). If you would like to use your own implementation, however, you now should have all the tools you need to get started.
 
 
    
