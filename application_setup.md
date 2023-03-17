@@ -1,6 +1,6 @@
 # Setting up the Application
 
-Note: We will be setting this under the presmise that there will be two Netlify sites: one that hosts the client application and the other that serves custom-made REST API to make calls to the MongoDB server.
+Note: We will be setting this under the premise that there will be two Netlify sites: one that hosts the client application and the other that serves custom-made REST API to make calls to the MongoDB server.
 
 If you have not completed the pre_setup.md instructions, please complete that before continuing with these instructions.
 
@@ -14,7 +14,7 @@ If you have not completed the pre_setup.md instructions, please complete that be
 - The site you have just created will serve as the client application where the React interface will be hosted.
 - However, when you go to this URL, you will receive an error. This is because we need to set the environmental variables.
 - The Priam project comes with a module called ```cross-env```, which allows the running and building of a React application with environmental variables.
-  - Head to the ```client/package.json``` file, and look for the code below:
+  - Head to the [client/package.json](https://github.com/KingTechnician/priam/blob/main/client/package.json) file, and look for the code below:
   ```
   "scripts":{
     "start" : "cross-env REACT_APP_AUTH0_DOMAIN=<auth0-domain-here> REACT_APP_AUTH0_CLIENT=<auth0-client-here> REACT_APP_BACKEND_URL=<backend-url-here> react-scripts start",
@@ -43,7 +43,7 @@ If you have not completed the pre_setup.md instructions, please complete that be
   8. However, the code won't work *quite* yet. There are still some environmental variables we need to set up.
 
 ### 3. Backend side - Setting up Environmental Variables
-- In the directory ```backend/netlify/functions```, you'll note that there are two environmental variables called: ```ATLASURI``` and ```CLIENT_URL```.
+- In the directory [backend/netlify/functions](https://github.com/KingTechnician/priam/tree/main/backend/netlify/functions), you'll note that there are two environmental variables called in those files: ```ATLASURI``` and ```CLIENT_URL```.
 - Normally, we would use a .env file, and we can technically do this if we are uploading manually, but **not** if uploading with Github.
 - To make things simpler and more secure, we can set environmental variables directly to our Netlify site. 
 - Head to the main dashboard of Netlify and navigate to your site.
@@ -83,7 +83,7 @@ One of the login goals of our application is that only emails from a specific un
   4. Here is where we can set an Action to be done every time a user tries to register for an account. Click the **+** button beside ```Add Action```.
   5. We're going to be creating our own Action, so choose ```Build Custom```.
   6. Under Name, choose something similar to ```University Email Whitelisting```, then continue to ```Create```.
-  7. Replace the ```exports.onExecutePreUserRegistration``` code with the code given at ```auth0-scripts/emailFiltering```.
+  7. Replace the ```exports.onExecutePreUserRegistration``` code with the code given at [auth0-scripts/emailFiltering](https://github.com/KingTechnician/priam/blob/main/auth0-scripts/emailFiltering.js).
   8. Set the parameter of the ```endsWith``` method to domain of your university email **without** the @ symbol.
   9. Set the comparison operator of ```event.client.name``` to the name of the authenication you set for your application as it appears on your dashboard.
   10. Click ```Save Draft```, then ```Deploy```.
@@ -113,7 +113,7 @@ Your Flow shuld look like this:
   11. Click the third icon on the left of the IDE, then ```Add Dependency```.
   12. Under name, choose ```mongodb```.
   13. This project uses 4.13.0 at the moment. You can use more recent versions or the latest versions, though be aware that syntax for the code may be different. Set the Version, then click ```Create```.
-  14. We're ready to include the code now! Replace the ```onExecutePreUserRegistration``` function with the code in ```auth0-scripts/serverPreparation.js```.
+  14. We're ready to include the code now! Replace the ```onExecutePreUserRegistration``` function with the code in [auth0-scripts/serverPreparation.js](https://github.com/KingTechnician/priam/blob/main/auth0-scripts/serverPreparation.js).
   15. Set the ```url``` to the name of the secret for your MongoDB url, if it is not ```ATLASURI```.
   16. Change the parameter of ```client.db``` to the name of the database you created on MongoDB.
   17. Click ```Save Draft```, then ```Deploy``` at the top right.
