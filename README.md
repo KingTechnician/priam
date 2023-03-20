@@ -65,13 +65,13 @@ https://user-images.githubusercontent.com/104329626/225977328-a4fab17d-e965-44b0
 
 ## Next Steps
 
-- Are there ways we can fortify the code more?
+- Are there ways we can make code more efficient?
 - Can we create a service that creates this application on behalf of others? (Perhaps a website or app that creates personalized Priam systems).
 
 
 ## Sponsorship
 
-Managing the serves, authentication, and hosting can be a monthly price, and as I implement this in my university, these costs are likely to increase. If you can, please consider donating. Funds will be used not only to support the technology to manage this app in my campus, but also for future endeavors of making change through software.
+Managing the servers, authentication, and hosting can be a monthly price, and as I implement this at my university, these costs are likely to increase. If you can, please consider donating. Funds will be used not only to support the technology to manage this app in my campus, but also for future endeavors of making change through software.
 
 [![KingTechnician](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/KingTechnician)
 
