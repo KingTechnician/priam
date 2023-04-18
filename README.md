@@ -75,3 +75,13 @@ Managing the servers, authentication, and hosting can be a monthly price, and as
 
 [![KingTechnician](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/KingTechnician)
 
+## [IMPORTANT]: Update Regarding Development of Priam
+- The next stage of Priam, for the time being, will be in a private repository.
+
+### What does this mean?
+- This current code will still be publicly available here. Feel free to use this to create something for yourself.
+- If you would like to contribute to what my next stage of Priam is, feel free to reach out to me.
+- The next stage I am making, when made public for users, **will be free** with few limitations. I have not changed my stance on making this application as usable as possible for students.
+- To make the progress of my next version more transparent, issues relating to it will be populated here publicly. That way, you can see what my action items are and get a good idea of how far I am.
+- For a more comprehensive look at this, check out the [live progress indicator](https://priam-progress.netlify.app) to see where I'm at.
+
