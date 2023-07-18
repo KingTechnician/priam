@@ -7,7 +7,7 @@ A progressive web application that uses a MongoDB, React, and Netlify serverless
  - Are you a student who has a new idea or concern they would like to make known to the university administration?
  - Are you unsure of the resources or means necessary?
  
- A solution presented by me, Isaiah Freeman, is Priam, web application that has the goal of making the desires of students more visible to faculty and administration at your university.
+ A solution presented by me is Priam, web application that has the goal of making the desires of students more visible to faculty and administration at your university.
  
  ## How?
  - The Priam system is simple: you might consider it a voting system. Students have the ability to create an account, and propose changes they would like to make to the university in a short post.
